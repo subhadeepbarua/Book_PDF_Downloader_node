@@ -33,6 +33,7 @@ const fetchData = async (bookName) => {
       }
   
       const bookData = response.data.files_found.map((item) => ({
+          file_name: item.file_name,
         file_link: item.file_link,
         file_size: item.file_size || 'N/A', // Use 'N/A' if file_size is not available
       }));
